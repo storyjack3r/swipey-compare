@@ -23,10 +23,10 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="pageMaker(book1,'demo1')">
+<body onload="pageMaker(book2,'demo2'), pageMaker(book1,'demo1')">
 <div class="container">
 
-    <div id="demo1" class="demo">
+    <div id="demo1" class="demo" onload="pageMaker(book1,'demo1')">
     <ul>
       <li id="targetLi" class="first dragend-page"></li>
       <li class="dragend-page"></li>
@@ -36,7 +36,7 @@
     </ul>
   </div>
 
-  <div id="demo2" class="demo offset">
+  <div id="demo2" class="demo offset" >
     <ul>
       <li class="first dragend-page"></li>
       <li class="dragend-page"></li>
@@ -52,10 +52,10 @@
   <script type="text/javascript" src="book-data-presentation.js"></script> 
 
   <script>
-    var screenHeight=screen.height/2 + "px";
+    var screenHeight=(screen.height/2)/100*80 + "px";
     $(function() {
       $("#demo1").dragend({
-        scribe: "10%",
+        scribe: "0%",
         afterInitialize: function() {
           this.container.style.visibility = "visible";
           this.container.style.height = screenHeight;
@@ -65,7 +65,7 @@
     
         $(function() {
       $("#demo2").dragend({
-        scribe: "10%",
+        scribe: "0%",
         afterInitialize: function() {
           this.container.style.visibility = "visible";
           this.container.style.height = screenHeight;

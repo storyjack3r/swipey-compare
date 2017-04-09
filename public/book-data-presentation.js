@@ -17,7 +17,7 @@ var nLi = $( "#" + slider +" ul li").length;
   var n;
   for(n = 1; n <=nLi; n++ ){
   var thisLi=n;
-  var xpage="";
+  var xpage="<div class='card'>";
   
   var page = bkText.split(" ");
   //builds individual page in li
@@ -25,7 +25,7 @@ var nLi = $( "#" + slider +" ul li").length;
         for (i = base; i <=base+50; i++) {
       xpage += page[i] + " ";
       }
-  xpage+="...";
+  xpage+="...</div>";
     
 //adding content
 
