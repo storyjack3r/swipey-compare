@@ -1,27 +1,18 @@
-Welcome to the Glitch BETA
+Welcome to Swipey compare
 =========================
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
-
-Glitch is a developer playground that lets you code a real web-app without the slow setup and deployment steps.
-
-[About Glitch](https://glitch.com/about)
 
 
-Your Project
+Project aims
 ------------
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env`
+* Compare two books
+* Swipe left to read 
+* Swipe right to remove book
+* Finish reading to see the book title
+* Accessible on mobile first
 
-On the front-end,
-- edit `client.js`, `style.css` and `index.html`
-- drag in `assets`, like images or music, to add them to your project
+Being made by Storyjacker
+-------------------------
 
-
-Made by Fog Creek
------------------
-
-\ ゜o゜)ノ
+xxx
