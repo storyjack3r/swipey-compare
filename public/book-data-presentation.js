@@ -5,28 +5,32 @@ function pageMaker(book,slider){
   
   
 
-  var bkTitle= book.name;
+  // var bkTitle= book.name;
   var bkText = book.text;
   var xpage="";
   var thisLi=1;
-  var page = bkText.split(" ");
+  var base=0;
+  
+  var splicer = 0;
   // var i;
 var nLi = $( "#" + slider +" ul li").length;
- console.log("nLi = " + nLi);
+  var n;
   for(n = 1; n <=nLi; n++ ){
-  thisLi=n;
-  xpage="";
+  var thisLi=n;
+  var xpage="";
   
+  var page = bkText.split(" ");
   //builds individual page in li
-        for (i = 0; i <=50; i++) {
+    var i;
+        for (i = base; i <=base+50; i++) {
       xpage += page[i] + " ";
       }
   xpage+="...";
-  book.page1 = xpage;
-  var page = bkText.split(" ");
-   $( "#" + slider +" ul li:nth-child("+ thisLi +")").append( book.page1 );
+    
+//adding content
+
+   $( "#" + slider +" ul li:nth-child("+ thisLi +")").append( xpage );
   
-    console.log(page[1]);
-}
-   page.splice(0, 50);
+base+=51;
+  }    
 }
