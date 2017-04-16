@@ -1,6 +1,29 @@
+
+var elSwitch = "<span id='options'><p>Swap for a new book?</p><p><button onclick='debug()'>Click me</button> <button onclick='backToPage()'>No</button></p></span>";
+var elStore;
+
+function debug(){
+  console.log("hello worldavid");
+}
+function newBookOption() {
+      elStore = el.innerHTML;
+      el.innerHTML=elSwitch;
+      el.style.background="#ccc";  
+      switched=1;
+}
+
+function backToPage() {
+    el.style.background="#fff";     
+    el.innerHTML=elStore;
+    switched=0;
+}  
+
 function swipedetect(el, callback){
   
+  
+
     var touchsurface = el,
+    
     swipedir,
     startX,
     startY,
@@ -46,13 +69,13 @@ function swipedetect(el, callback){
 }
   
 var el = document.getElementById('demo1');
-
+var switched=0;
 swipedetect(el, function(swipedir){
     // swipedir contains either "none", "left", "right", "top", or "down"
     if (swipedir =='up'){
-        el.style.background="#666"; 
+    newBookOption();
   }
-  if (swipedir =='down'){
-        el.style.background="#fff";     
+  if (swipedir =='down' && switched==1){
+    backToPage();
   }
 })

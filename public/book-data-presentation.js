@@ -10,27 +10,36 @@ function pageMaker(book,slider){
   var xpage="";
   var thisLi=1;
   var base=0;
+  var specialPageCopy="<div class='card'>You were reading " + book.name + "</card>";
   
   var splicer = 0;
   // var i;
 var nLi = $( "#" + slider +" ul li").length;
   var n;
+
   for(n = 1; n <=nLi; n++ ){
-  var thisLi=n;
+    var thisLi=n;
+    if (n==nLi){
+      xpage=specialPageCopy;
+      // xpage="test";
+    }
+    else{
+  
   var xpage="<div class='card'>";
   
   var page = bkText.split(" ");
   //builds individual page in li
     var i;
-        for (i = base; i <=base+50; i++) {
+        for (i = base; i <=base+30; i++) {
       xpage += page[i] + " ";
       }
   xpage+="...</div>";
-    
+    }
 //adding content
 
    $( "#" + slider +" ul li:nth-child("+ thisLi +")").append( xpage );
   
-base+=51;
+base+=31;
   }    
 }
+
