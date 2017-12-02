@@ -1,0 +1,90 @@
+* {
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    body {
+      background: #eee;
+      padding: 15px;
+      font-family: "Sans", "Times New Roman", sans-serif;
+        font-size: 18px;
+      
+      
+    }
+
+li {
+  height:100px;
+}
+
+.card {
+  padding:10%;
+  line-height:1.5;
+}
+
+.card p {
+    text-align: justify;
+}
+
+
+h2{
+  padding-top:0;
+  margin-top:0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:24px;
+}
+
+        .demo {
+      padding:0;
+          margin:0;
+
+      width: 100%;
+          border-bottom: 1px solid #ccc;
+      visibility: hidden;
+      background: white;
+      cursor: hand;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+      cursor: grab;
+
+    }
+
+.demo li{
+/*     display:block; */
+
+    } 
+
+
+    #dragend {
+      position: absolute;
+
+      background: white;
+      padding: 18px;
+      color: #fff;
+      border-radius: 3px;
+
+      font-size: 15px;
+    }
+
+    #dragend h1 {
+      font-size: 15px;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    #dragend a {
+      text-decoration: underline;
+      color: #fff
+    }
+    button{
+      padding:10px;
+      background-color:white;
+    }
+
+#options{
+  padding:5%;
+  font-size:1.2em;
+  text-align:center;
+  font-family:sans-serif;
+  font-weight:bold;
+}
